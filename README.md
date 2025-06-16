@@ -42,8 +42,8 @@ Marks the room as booked and stores guest info
 You said:
 write a same readme file this also
 
-ChatGPT said:
-Certainly! Here's a complete and detailed README file in description format for your Hotel Room Booking System in C. You can directly use or modify this for your GitHub repository.
+
+
 
 🏨 Hotel Room Booking & Billing System (C Project)
 📄 Description
