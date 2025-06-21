@@ -1,0 +1,62 @@
+=====================================
+     Welcome To Hotel Dragon Fly     
+     { Where The Luxury Meets }      
+=====================================
+
+--- Main Menu ---
+1. Show Available Rooms
+2. Book Room
+3. Check Out
+4. View Room Status
+5. Exit
+Enter choice: 2
+
+Available Rooms:
+Room 101 (Single)
+Room 102 (Double)
+Room 103 (Deluxe)
+Room 104 (Single)
+Room 105 (Double)
+
+Enter room number to book: 103
+Enter guest name: sarthak
+Enter email: iamsarthakjahagirdar@gmail.com
+Enter phone: 9422395817
+Enter number of days: 2
+Room 103 booked successfully for sarthak!
+
+--- Main Menu ---
+1. Show Available Rooms
+2. Book Room
+3. Check Out
+4. View Room Status
+5. Exit
+Enter choice: 3
+Enter room number to check out: 103
+
+=====================================
+           Hotel Dragon Fly          
+=====================================
+Guest Name     : sarthak
+Email          : iamsarthakjahagirdar@gmail.com
+Phone Number   : 9422395817
+Room Number    : 103
+Room Type      : Deluxe
+Days Stayed    : 2
+Rate per Day   : Rs. 2500
+-------------------------------------
+Total Amount   : Rs. 5000
+=====================================
+          Do Visit Again    
+=====================================
+
+--- Main Menu ---
+1. Show Available Rooms
+2. Book Room
+3. Check Out
+4. View Room Status
+5. Exit
+Enter choice: 5
+Goodbye! Visit Again.
+
+
