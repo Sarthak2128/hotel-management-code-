@@ -1,0 +1,252 @@
+🏨 Hotel Room Booking System in C
+✅ Overview
+This C program simulates a basic hotel room booking and billing system for a fictional hotel called Hotel Dragon Fly. It allows users to:
+
+View available rooms
+
+Book a room with guest details
+
+Check out and receive a detailed bill
+
+View the status of all rooms
+
+Exit the program
+
+It uses structures, arrays, strings, and menus to manage and organize data effectively.
+
+🔧 Key Concepts Used
+Structures (struct)
+
+Arrays of structures
+
+String handling (fgets, strcpy, strcmp)
+
+Conditional logic and menu handling
+
+Input/output operations
+
+📂 Data Structure: Room
+c
+Copy
+Edit
+struct Room {
+    int number;
+    char type[10];
+    int isBooked;
+    char guestName[50];
+    char email[100];
+    char phone[15];
+    int days;
+};
+This structure holds:
+number → Room number (e.g., 101)
+
+type → Type of room (Single, Double, Deluxe)
+
+isBooked → Status: 1 if booked, 0 if available
+
+guestName, email, phone → Guest contact details
+
+days → Number of days the room is booked
+
+c
+Copy
+Edit
+struct Room rooms[MAX_ROOMS];
+An array of 5 room records is maintained globally.
+
+⚙️ Functionality Breakdown
+1️⃣ Room Initialization
+c
+Copy
+Edit
+void initRooms()
+Automatically assigns:
+
+Room numbers from 101 to 105
+
+Room types in repeating sequence: Single, Double, Deluxe
+
+Sets isBooked = 0 to mark rooms as available
+
+✅ Ensures the hotel has a predefined setup at startup.
+
+2️⃣ Show Available Rooms
+c
+Copy
+Edit
+void showAvailableRooms()
+Loops through the rooms[] array.
+
+Prints all rooms where isBooked == 0.
+
+📤 Output Example:
+
+vbnet
+Copy
+Edit
+Available Rooms:
+Room 101 (Single)
+Room 102 (Double)
+3️⃣ Book a Room
+c
+Copy
+Edit
+void bookRoom()
+📝 Workflow:
+Displays available rooms.
+
+Prompts user to enter a room number.
+
+Verifies room availability.
+
+Collects:
+
+Guest Name
+
+Email
+
+Phone number
+
+Number of days for booking
+
+Sets isBooked = 1 and stores user data.
+
+🧠 Uses fgets() and strcspn() to read full-line input and remove the trailing newline character.
+
+📤 Sample Booking Output:
+
+rust
+Copy
+Edit
+Room 103 booked successfully for John Doe!
+4️⃣ Print Final Bill
+c
+Copy
+Edit
+void printBill(struct Room r)
+💰 Calculates rate per day based on room type:
+Single → ₹1000/day
+
+Double → ₹1500/day
+
+Deluxe → ₹2500/day
+
+Multiplies rate by number of days to get total amount.
+
+📄 Displays a professional formatted bill:
+
+markdown
+Copy
+Edit
+=====================================
+           Hotel Dragon Fly
+=====================================
+Guest Name     : sarthsk
+Email          : abc@gmail.com
+Phone Number   : 9422395817
+Room Number    : 103
+Room Type      : Deluxe
+Days Stayed    : 3
+Rate per Day   : Rs. 2500
+-------------------------------------
+Total Amount   : Rs. 7500
+=====================================
+          Do Visit Again
+=====================================
+5️⃣ Check Out
+c
+Copy
+Edit
+void checkOut()
+🧾 Workflow:
+Prompts user for room number.
+
+Validates if the room is booked.
+
+Calls printBill() to show the bill.
+
+Resets the room:
+
+Sets isBooked = 0
+
+Clears guest details
+
+Resets days = 0
+
+📤 Sample Output:
+
+yaml
+Copy
+Edit
+Total Amount   : Rs. 7500
+Do Visit Again
+6️⃣ Show All Rooms
+c
+Copy
+Edit
+void showAllRooms()
+Displays the status of every room:
+
+Booked ✅
+
+Available 🟢
+
+📤 Sample Output:
+
+sql
+Copy
+Edit
+All Room Status:
+Room 101 (Single) - Booked
+Room 102 (Double) - Available
+🎯 Main Function Workflow
+c
+Copy
+Edit
+int main()
+🚀 Menu-Driven Interface:
+c
+Copy
+Edit
+1. Show Available Rooms
+2. Book Room
+3. Check Out
+4. View Room Status
+5. Exit
+Each menu option calls its corresponding function using a switch statement inside a do-while loop, which keeps the program running until the user selects option 5.
+
+✅ Strengths of the Program
+Beginner-friendly design
+
+Realistic simulation of hotel operations
+
+Modularized code using functions
+
+Clean and readable output formatting
+
+Accepts full string input for guest names and contact details
+
+💡 Suggestions for Enhancement
+Store guest history in a file (using file handling)
+
+Add admin login and password system
+
+Support more rooms dynamically with malloc
+
+Add room rates and types input at runtime
+
+Introduce room services or food billing
+
+🧠 Conclusion
+This hotel booking program is a well-structured, beginner-level C project that demonstrates:
+
+How to use structures for real-world data modeling
+
+Applying string and number input handling
+
+Developing menu-driven systems
+
+Simulating customer management and billing
+
+
